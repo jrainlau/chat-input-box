@@ -26,16 +26,18 @@ new Vue({
       const result = await paste(e)
       const imgRegx = /^data:image\/png;base64,/
       if (imgRegx.test(result)) {
-        const sel = window.getSelection()
-        if (sel && sel.rangeCount === 1 && sel.isCollapsed) {
-          const range = sel.getRangeAt(0)
-          const img = new Image()
-          img.src = result
-          range.insertNode(img)
-          range.collapse(false)
-          sel.removeAllRanges()
-          sel.addRange(range)
-        }
+        // const sel = window.getSelection()
+        // if (sel && sel.rangeCount === 1 && sel.isCollapsed) {
+        //   const range = sel.getRangeAt(0)
+        //   const img = new Image()
+        //   img.src = result
+        //   range.insertNode(img)
+        //   range.collapse(false)
+        //   sel.removeAllRanges()
+        //   sel.addRange(range)
+        // }
+
+        document.execCommand('insertImage', false, result)
       } else {
         document.execCommand('insertText', false, result)
       }

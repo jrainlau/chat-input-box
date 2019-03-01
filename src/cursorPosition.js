@@ -1,3 +1,9 @@
+
+/**
+ * 获取光标位置
+ * @param {DOMElement} element 输入框的dom节点
+ * @return {Number} 光标位置
+ */
 export const getCursorPosition = (element) => {
   let caretOffset = 0
   const doc = element.ownerDocument || element.document
@@ -13,6 +19,11 @@ export const getCursorPosition = (element) => {
   return caretOffset
 }
 
+/**
+ * 设置光标位置
+ * @param {DOMElement} element 输入框的dom节点
+ * @param {Number} cursorPosition 光标位置的值
+ */
 export const setCursorPosition = (element, cursorPosition) => {
   const range = document.createRange()
   range.setStart(element.firstChild, cursorPosition)
