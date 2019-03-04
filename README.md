@@ -3,6 +3,7 @@
 最近折腾 Websocket，打算开发一个聊天室应用练练手。在应用开发的过程中发现可以插入 emoji ，粘贴图片的富文本输入框其实蕴含着许多有趣的知识，于是便打算记录下来和大家分享。
 
 仓库地址：[chat-input-box](https://github.com/jrainlau/chat-input-box)
+
 预览地址：https://codepen.io/jrainlau/pen/wOMOYw
 
 首先来看看 demo 效果：
